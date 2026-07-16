@@ -31,7 +31,8 @@ export default function Hero() {
 
             {/* Right Content */}
             <div className=''>
-                <HeroImg src='./public/images/backgroundImg.jpg' />
+                {/* Vite serves files in public/ from the root path. */}
+                <HeroImg src='/images/backgroundImg.jpg' />
             </div>
             
         </div>
