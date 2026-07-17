@@ -11,23 +11,27 @@ export default function Trending() {
         </div>
         {/* Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            
             {/* Item-1 */}
-            <div className="col-span-1 md:col-span-2 lg:col-span-3">
+            <div className="col-span-3 lg:col-span-1">
                 <ProductCard price='550' position='bottom-4 left-5' src='./images/bg1.avif'/>
             </div>
-            {/* Item-2+3 */}
-        </div>
-    
-        <div className="col-span1 md:col-span-2 mt-10 flex flex-col w-full space-y-6">
-            <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-6">
+
+            {/* Item-2 */}
+            <div className="col-span-3 lg:col-span-1">
                 <ProductCard price='1000' position='bottom-4 left-5' src='./images/bg2.avif'/>
+            </div>
+
+            {/* Item-3 */}
+            <div className="col-span-3 lg:col-span-1">
                 <ProductCard price='260' position='bottom-4 left-5' src='./images/bg3.avif'/>
             </div>
-            <div className='pt-6'>
+
+            <div className='flex flex-col lg:flex-row col-span-3 justify-between lg:items-center'>
                 <h3 className='text-3xl font-extrabold uppercase mb-2'>
                     CUTTING-EDGE <br /> FURNITURE TRENDS
                 </h3>
-                <p className='text-base text-zinc-600 max-w-lg'>
+                <p className='text-base text-zinc-600 max-w-lg right-0'>
                     Choosing the right furniture for the home online will add elegance 
                     and functionality to your space with comfort and elegance.
                 </p>
