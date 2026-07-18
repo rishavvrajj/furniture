@@ -4,6 +4,7 @@ import Header from './components/Header'
 import Hero from './components/Hero'
 import Trending from './components/Trending'
 import NewArrival from './components/NewArrival'
+import ShopByRoom from './components/ShopByRoom'
 
 export default function App() {
   return (
@@ -18,6 +19,8 @@ export default function App() {
         <Trending />
       <hr className='text-zinc-300 -mt-0'/>
         <NewArrival />
+      <hr className='text-zinc-300 -mt-0'/>
+        <ShopByRoom />
       </main>
 
       {/* <Footer /> */}
