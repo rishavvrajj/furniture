@@ -6,6 +6,7 @@ import Trending from './components/Trending'
 import NewArrival from './components/NewArrival'
 import ShopByRoom from './components/ShopByRoom'
 import GetInspired from './components/GetInspired'
+import Footer from './components/Footer'
 
 export default function App() {
   return (
@@ -16,17 +17,19 @@ export default function App() {
       
       <main>
         <Hero />
-      <hr className='text-zinc-300 -mt-0'/>
+      {/* <hr className='text-zinc-300 -mt-0'/> */}
         <Trending />
-      <hr className='text-zinc-300 -mt-0'/>
+      {/* <hr className='text-zinc-300 -mt-0'/> */}
         <NewArrival />
-      <hr className='text-zinc-300 -mt-0'/>
+      {/* <hr className='text-zinc-300 -mt-0'/> */}
         <ShopByRoom />
-      <hr className='text-zinc-300 -mt-0'/>
+      {/* <hr className='text-zinc-300 -mt-0'/> */}
         <GetInspired />
       </main>
 
-      {/* <Footer /> */}
+      {/* <hr className='text-zinc-300 -mt-0'/> */}
+
+      <Footer />
     </div>
   )
 }

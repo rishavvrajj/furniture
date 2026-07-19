@@ -19,7 +19,7 @@ export default function ShopByRoom() {
     setCurrentImageSrc(initialImageSrc)
   }
   return (
-    <section className='mx-0 lg:mx-10 mt-10 md:mt-12 lg:mt-15 py-6 lg:py-7 px-3 lg:px-8 md:mx-10 my-2 md:my-2'>
+    <section className='mx-0 lg:mx-10 py-6 lg:py-7 px-3 lg:px-8 md:mx-10 my-2 md:my-2'>
 
         <h2 className='heading-2 impact'>BEST SHOP BY <br /> ROOM</h2>
 
