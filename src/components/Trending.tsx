@@ -1,12 +1,24 @@
 import React from 'react'
 import ProductCard from './ProductCard'
+import { useGSAP } from '@gsap/react'
+import gsap from 'gsap'
 
 export default function Trending() {
+
+    useGSAP(() => {
+        gsap.from('.heading', {
+            y: 50,
+            opacity: 0,
+            duration: 1,
+            ease: 'expo.inOut'
+        })
+    }, [])
+
   return (
     <section className='mx-0 lg:mx-10 py-6 lg:py-7 px-3 lg:px-8 md:mx-10 my-2 md:my-2'>
         {/* Title */}
         <div className='relative flex justify-between items-end mb-12'>
-            <h2 className='text-6xl lg:text-9xl impact uppercase text-nowrap leading-tighter'>For Trending <br /> Now</h2>
+            <h2 className='heading text-6xl lg:text-9xl impact uppercase text-nowrap leading-tighter'>For Trending <br /> Now</h2>
             <button className='text-sm lg:text-lg absolute right-0 lg:right-5 font-medium border border-zinc-900 text-zinc-900 px-5 lg:px-8 py-3 rounded-full cursor-pointer hover:bg-zinc-900 hover:text-zinc-50 transition-all duration-200 ease-in-out'>See All</button>
         </div>
         {/* Grid */}

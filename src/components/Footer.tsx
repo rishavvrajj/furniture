@@ -26,7 +26,7 @@ export default function Footer() {
         </div>
 
         {/* Bottom Area Copyright & Social Icons */}
-        <div className='border-t border-zinc-800 py-6 lg:py-10'>
+        <div className='border-t border-zinc-800 py-6 lg:py-10 mb-5'>
           <div className='mx-auto px-4 sm:px-8 flex flex-col sm:flex-row justify-between items-center space-y-4 sm:space-y-0 text-sm'>
             <p className='text-zinc-400'>
               <strong>Furniture.</strong> All right reserved
@@ -39,7 +39,6 @@ export default function Footer() {
               <SocialIcon Icon={Youtube} />
             </div>
             <div>
-              <p className='text-zinc-400'>Design By <strong>Sahil Dobariya</strong></p>
               <p className='text-zinc-400'>Build By <strong>Rishav Raj</strong></p>
             </div>
           </div>

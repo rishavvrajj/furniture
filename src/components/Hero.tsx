@@ -1,10 +1,46 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 import { ArrowRight } from 'lucide-react'
 import HeroImg from './HeroImg'
+import gsap from 'gsap'
 
 export default function Hero() {
+
+    const rootRef = useRef(null)
+
+    useEffect(() => {
+        const ctx = gsap.context(() => {
+            const tl = gsap.timeline({defaults:{ease:'expo.inOut'}})
+            tl.from(".Fine", {
+                x: -120,
+                opacity: 0,
+                duration: 2
+            }, "0")
+
+            tl.from('.Furniture', {
+                x: -120,
+                opacity: 0,
+                duration: 2
+            }, "0")
+
+            tl.from(".Hero-img-wrapper", {
+                x: 100,
+                opacity: 0,
+                duration: 2,
+                ease: 'expo.inOut'
+            }, '0')
+
+            tl.from('.hero-subtext', {
+                y: 24,
+                opacity: 0,
+                duration: 2
+            }, '0')
+        }, rootRef)
+
+        return () => ctx.revert();
+    }, [])
+
   return (
-    <section className='mx-0 lg:mx-10 mt-10 md:mt-12 lg:mt-15 py-6 lg:py-7 px-3 lg:px-8 md:mx-10 my-2 md:my-2'>
+    <section ref={rootRef} className='mx-0 lg:mx-10 mt-10 md:mt-12 lg:mt-15 py-6 lg:py-7 px-3 lg:px-8 md:mx-10 my-2 md:my-2'>
         <div className='flex flex-col relative lg:flex-row'>
 
             {/* Left content  */}
@@ -12,14 +48,14 @@ export default function Hero() {
 
                 {/* Main Title: Large Bold */}
                 <h1 className='text-7xl uppercase sm:text-8xl font-extrabold leading-none -ml-0.5'>
-                    <span className='block impact text-9xl lg:text-[250px] tracking-widest'>Fine</span>
-                    <span className='block impact text-6xl lg:text-[200px] tracking-widest pl-0.5'>Furniture</span>
+                    <span className='Fine block impact text-9xl lg:text-[250px] tracking-widest'>Fine</span>
+                    <span className='Furniture block impact text-6xl lg:text-[200px] tracking-widest pl-0.5'>Furniture</span>
                 </h1>
 
                 <div className='flex items-center justify-between'>
 
                     {/* SubText  */}
-                    <div className='text-xs lg:text-lg text-zinc-900 line-clamp-2 lg:line-clamp-none overflow-ellipsis w-2/3 lg:w-full mt-2'>
+                    <div className='hero-subtext text-xs lg:text-lg text-zinc-900 line-clamp-2 lg:line-clamp-none overflow-ellipsis w-2/3 lg:w-full mt-2'>
                         Choosing the right furniture for your home online will and elegence and funcionality to your space.<div className="hidden lg:block"> We offer a curated collection of fine furnishing. </ div>
                     </div>
 

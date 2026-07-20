@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function HeroImg({src} : { src : string}) {
   return (
-    <div className='lg:absolute right-0 mt-5 lg:mt-5 rounded-xl w-full lg:w-1/2 overflow-hidden h-50 flex items-center justify-center'>
+    <div className='Hero-img-wrapper lg:absolute right-0 mt-5 lg:mt-5 rounded-xl w-full lg:w-1/2 overflow-hidden h-50 flex items-center justify-center'>
         <div style={{
             backgroundImage: `url(${src})`,
             backgroundPosition: 'bottom',
